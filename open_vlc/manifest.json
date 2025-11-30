@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Play in VLC",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting","contextMenus", "tabs"],
+  "host_permissions": ["http://localhost:8080/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
