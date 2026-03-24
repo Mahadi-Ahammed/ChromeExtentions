@@ -1,7 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <button id="play">Play in VLC</button>
-    <script src="popup.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: sans-serif;
+      width: 220px;
+      padding: 12px;
+      margin: 0;
+    }
+    #status {
+      font-size: 11px;
+      color: #666;
+      margin-bottom: 8px;
+      min-height: 14px;
+      word-break: break-all;
+    }
+    #status.found { color: #2a7a2a; }
+    #status.none  { color: #999; }
+    button {
+      width: 100%;
+      padding: 8px;
+      background: #ff8800;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover { background: #e07700; }
+    button:disabled { background: #ccc; cursor: default; }
+  </style>
+</head>
+<body>
+  <div id="status" class="none">Scanning...</div>
+  <button id="play">▶ Play in VLC</button>
+  <script src="popup.js"></script>
+</body>
 </html>
